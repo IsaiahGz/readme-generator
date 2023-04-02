@@ -1,6 +1,7 @@
 // Import libraries
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // Questions array to pass to inquirer
 const questions = [
@@ -28,11 +29,11 @@ const questions = [
 		type: 'list',
 		name: 'license',
 		message: 'Which license do you want your project to use?',
-		choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3', 'None'],
+		choices: ['MIT', 'Apache 2.0', 'GPL 3.0', 'BSD 3', { name: 'None', value: '' }],
 	},
 	{
 		type: 'input',
-		name: 'commandRun',
+		name: 'commandInstall',
 		message: 'What command should be run to install dependencies?',
 		default: 'npm i',
 	},
@@ -60,6 +61,7 @@ function writeToFile(fileName, data) {}
 // Starter function
 async function init() {
 	const response = await inquirer.prompt(questions);
+	const markdown = generateMarkdown(response);
 	console.log(response);
 }
 
