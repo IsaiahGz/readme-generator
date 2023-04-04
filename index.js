@@ -29,7 +29,7 @@ const questions = [
 		type: 'list',
 		name: 'license',
 		message: 'Which license do you want your project to use?',
-		choices: ['MIT', 'Apache 2.0', 'GNU GPL v3', 'BSD 3', 'ISC' { name: 'None', value: '' }],
+		choices: ['MIT', 'Apache 2.0', 'GNU GPL v3', 'BSD 3', 'ISC', { name: 'None', value: '' }],
 	},
 	{
 		type: 'input',
@@ -55,14 +55,17 @@ const questions = [
 	},
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Function to write README file
+function writeToFile(fileName, data) {
+	fs.writeFileSync(fileName, data);
+}
 
 // Starter function
 async function init() {
 	const response = await inquirer.prompt(questions);
 	const markdown = generateMarkdown(response);
-	console.log(response);
+	writeToFile('README.md', markdown);
+	console.log('Successfully generated README.md...');
 }
 
 // Function call to initialize app
