@@ -84,7 +84,7 @@ ${commandTest}
 \`\`\`
 
 ## Questions
-If you have any questions about this repository, open an issue or contact me directly at [${email}](mailto:${email}). You can find more of my work at (${username})[https://github.com/${username}].
+If you have any questions about this repository, open an issue or contact me directly at [${email}](mailto:${email}). You can find more of my work at [${username}](https://github.com/${username}).
 `;
 }
 
