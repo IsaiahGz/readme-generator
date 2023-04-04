@@ -3,7 +3,7 @@
 ## Description
 
 A basic README.md generator written with Node.js as well as the [Inquirer](https://github.com/SBoudrias/Inquirer.js) library.
-Users are prompted to answer a couple questions regarding their project. [Here is a short demo showing its usage](https://drive.google.com/file/d/1jLdKWqzlNkOs0LsQ28GMx7H3Dcn8ELfV/view).
+Users are prompted to answer a couple questions regarding their project and a thorough README is generated in response in the output folder. [Here is a short demo showing its usage](https://drive.google.com/file/d/1jLdKWqzlNkOs0LsQ28GMx7H3Dcn8ELfV/view).
 
 ## Installation
 
