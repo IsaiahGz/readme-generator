@@ -64,7 +64,7 @@ function writeToFile(fileName, data) {
 async function init() {
 	const response = await inquirer.prompt(questions);
 	const markdown = generateMarkdown(response);
-	writeToFile('README.md', markdown);
+	writeToFile('./output/README.md', markdown);
 	console.log('Successfully generated README.md...');
 }
 
